@@ -1,0 +1,55 @@
+{
+  "name": "snowpack-preact-typescript",
+  "version": "1.0.0",
+  "description": "Starter repo for snowpack + preact + TS",
+  "main": "index.js",
+  "repository": "git@github.com:jackyef/snowpack-preact-typescript.git",
+  "author": "Jacky Efendi <jacky.efendi1@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx}\"",
+    "test": "jest",
+    "build:server": "webpack --config ./server/webpack.config.js"
+  },
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-static": "^5.0.0",
+    "otion": "^0.6.1",
+    "preact": "^10.4.1",
+    "preact-render-to-string": "^5.1.9",
+    "react-otion": "^0.6.1"
+  },
+  "devDependencies": {
+    "@snowpack/app-scripts-preact": "^1.1.4",
+    "@snowpack/plugin-webpack": "^1.1.0",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/preact": "^1.0.2",
+    "@types/jest": "^25.2.3",
+    "@types/koa": "^2.11.3",
+    "@types/koa-static": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "assets-webpack-plugin": "^5.0.2",
+    "eslint": "^7.2.0",
+    "eslint-config-preact": "^1.1.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "file-loader": "^6.0.0",
+    "fs-extra": "^9.0.1",
+    "jest": "^25.4.0",
+    "prettier": "^2.0.0",
+    "snowpack": "^2.2.0",
+    "ts-loader": "^7.0.5",
+    "ts-node-dev": "^1.0.0-pre.50",
+    "typescript": "^3.9.5",
+    "webpack-cli": "^3.3.12"
+  }
+}
