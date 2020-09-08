@@ -2,10 +2,10 @@ import { h, render, hydrate } from '../web_modules/preact.js';
 import '../web_modules/preact/devtools.js';
 import { hydrate as otionHydrate, setup } from '../web_modules/otion.js';
 import App from './App.js';
-import otionConfig from '../server/otion.config.js';
 
 if (typeof window !== 'undefined') {
-  setup(otionConfig);
+  setup({}); // should be the same as server/otion.config.ts
+
   otionHydrate();
 }
 
