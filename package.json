@@ -13,9 +13,10 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "test": "jest",
+    "dev:server": "webpack --config ./server/webpack.config.js --watch --mode='development'",
     "build:server": "webpack --config ./server/webpack.config.js"
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "jest": "^25.4.0",
     "prettier": "^2.0.0",
     "snowpack": "^2.2.0",
+    "start-server-webpack-plugin": "^2.2.5",
     "ts-loader": "^7.0.5",
     "ts-node-dev": "^1.0.0-pre.50",
     "typescript": "^3.9.5",
