@@ -1,7 +1,7 @@
-# Snowpack + Preact + SSR + TypeScript starter (WIP)
+# Snowpack + Preact + Otion + SSR + TypeScript starter (WIP)
 
 Modern web development starter. Use snowpack during development for fast development, bundle using webpack for production.
-- 📦 13.1 KB JS bundle size (5.61 KB gzipped)
+- 📦 18.6 KB (gzipped) JS bundle size, core-js included
 
 ## Includes
 - **Snowpack**, for blazing fast dev environment
