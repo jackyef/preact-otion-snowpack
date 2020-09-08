@@ -34,7 +34,3 @@ Modern web development starter. Use snowpack during development for fast develop
     yarn build:server
     node server/dist/main.js
     ```
-
-## Current issues
-- Extracted CSS from SSR are only available for first request on asynchronous requests
-- Styles using `css` tags are not minified in client bundle

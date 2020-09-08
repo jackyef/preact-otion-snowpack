@@ -1,9 +1,9 @@
 {
-  "name": "snowpack-preact-typescript",
+  "name": "preact-otion-snowpack",
   "version": "1.0.0",
-  "description": "Starter repo for snowpack + preact + TS",
+  "description": "Starter repo for snowpack + preact + otion + TS, with SSR included",
   "main": "index.js",
-  "repository": "git@github.com:jackyef/snowpack-preact-typescript.git",
+  "repository": "git@github.com:jackyef/preact-otion-snowpack.git",
   "author": "Jacky Efendi <jacky.efendi1@gmail.com>",
   "license": "MIT",
   "publishConfig": {
