@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "otion": "./otion.js",
+    "preact": "./preact.js",
+    "preact/devtools": "./preact/devtools.js"
+  }
+}

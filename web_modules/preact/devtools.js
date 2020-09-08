@@ -1,0 +1,1 @@
+import{n as o,p as n,d as _}from"../common/preact.module-02650eac.js";typeof window!="undefined"&&window.__PREACT_DEVTOOLS__&&window.__PREACT_DEVTOOLS__.attachPreact("10.4.8",o,{Fragment:n,Component:_});

@@ -1,0 +1,1 @@
+import{h as o,render as s,hydrate as r}from"../web_modules/preact.js";import"../web_modules/preact/devtools.js";import{hydrate as n,setup as d}from"../web_modules/otion.js";import t from"./App.js";typeof window!="undefined"&&(d({}),n());const e=document.getElementById("root");e.hasChildNodes()?r(o(t,{name:"John Doe"}),e):s(o(t,{name:"John Doe"}),e);
