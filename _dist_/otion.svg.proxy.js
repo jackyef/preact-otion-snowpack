@@ -1,1 +1,1 @@
-export default"/_dist_/otion.svg";
+export default "/_dist_/otion.svg";
