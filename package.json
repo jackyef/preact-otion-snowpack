@@ -13,6 +13,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
+    "build:gh-pages": "cross-env GH_PAGES=true snowpack build",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "test": "jest",
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@snowpack/app-scripts-preact": "^1.1.4",
-    "@snowpack/plugin-webpack": "^1.1.0",
+    "@snowpack/plugin-webpack": "^2.0.0",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/preact": "^1.0.2",
     "@types/jest": "^25.2.3",
@@ -37,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
     "assets-webpack-plugin": "^5.0.2",
+    "cross-env": "^7.0.2",
     "eslint": "^7.2.0",
     "eslint-config-preact": "^1.1.1",
     "eslint-config-prettier": "^6.11.0",
@@ -46,7 +48,7 @@
     "fs-extra": "^9.0.1",
     "jest": "^25.4.0",
     "prettier": "^2.0.0",
-    "snowpack": "^2.2.0",
+    "snowpack": "^2.7.0",
     "start-server-webpack-plugin": "^2.2.5",
     "ts-loader": "^7.0.5",
     "ts-node-dev": "^1.0.0-pre.50",
