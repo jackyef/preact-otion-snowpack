@@ -14,7 +14,15 @@ declare const STATIC_ASSETS_PATH: string;
 
 const app = new Koa();
 const webpackManifest = require(ASSETS_MANIFEST_PATH);
-const mainJs = webpackManifest.main.js;
+const isDev = process.env.NODE_ENV !== 'production';
+
+const mainJs = isDev ? '' : [
+  webpackManifest['webpack-runtime'].js,
+  webpackManifest.commons.js,
+  webpackManifest.index.js,
+].reduce((acc, v) => {
+  return `${acc}<script defer src="${v}"></script>`;
+}, '');
 
 app.use(
   serve(STATIC_ASSETS_PATH, {
@@ -35,15 +43,6 @@ const App = require('../src/App').default;
 
 app.use(async (ctx) => {
   const markup = renderToString(<App name="SSR" />);
-
-  // simulate asynchronous rendering, for example, maybe we are using react-apollo `renderToStringWithData()`
-  await (async () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 500);
-    });
-  })();
 
   // we only include styles used in the rendered markup
   const style = getStyleTag(filterOutUnusedRules(injector, markup));
@@ -75,7 +74,10 @@ app.use(async (ctx) => {
     </head>
     <body>
       <div id="root">${markup}</div>
-      <script defer src="${mainJs}"></script>
+      ${isDev ? `
+        <script type="module" src="http://localhost:8080/_dist_/index.js"></script>
+        <script>window.HMR_WEBSOCKET_URL = "ws://localhost:8080"</script>
+      ` : mainJs}
     </body>
     </html>
   `;

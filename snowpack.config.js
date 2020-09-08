@@ -3,6 +3,7 @@ const prefix = buildingGhPages ? '/preact-otion-snowpack/' : '/';
 
 module.exports = {
   extends: '@snowpack/app-scripts-preact',
+  install: ['@prefresh/vite/utils'],
   scripts: {},
   plugins: [
     [
@@ -30,6 +31,6 @@ module.exports = {
       js: 'main.[contenthash:10].js',
       css: 'main.[contenthash:10].css',
       assets: '[name].[contenthash:10].[ext]',
-    }
-  }
+    },
+  },
 };

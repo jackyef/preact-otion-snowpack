@@ -23,14 +23,26 @@ Modern web development starter. Use snowpack during development for fast develop
     yarn start
     ```
 
-3. Generate production client bundle using webpack
+3. To test SSR (uses production build)
+    ```sh
+    yarn start # start snowpack dev server for the client assets
+    yarn dev:server # start the development server for doing SSR
+
+    # All done! Go to localhost:8001 to see your SSR'd rendered app
+    ```
+
+## Deploying to production
+1. Generate production client bundle using webpack, upload these to your public path (usually a CDN)
     ```sh
     yarn build
     ```
 
-4. To test SSR (uses production build)
+2. Generate production server bundle using webpack
     ```sh
-    yarn build # build the client bundle first, if it's not built yet
     yarn build:server
-    node server/dist/main.js
     ```
+
+3. Run the server bundle on your NodeJS app instance
+
+## Known issue
+- On development, after the first HMR reload, the extracted critical CSS will always be empty.
